@@ -9,5 +9,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Revenant1913/java-app.git'
             }
         }
+
+        stage("Unit Testing"){
+            steps {
+                sh 'mvn test'
+            }
+        }
     }
 }
